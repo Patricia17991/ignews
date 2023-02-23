@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <NextAuthProvider session={pageProps.session}>
       <Header />
       <Component {...pageProps} />
-    <NextAuthProvider/>
+    </NextAuthProvider>
   )
 }
 
