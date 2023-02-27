@@ -9,4 +9,9 @@ export default NextAuth({
             scope: 'read:user'
         }),
     ],
+    callbacks: {
+        async SignIn(user, account, profile) {
+            return true
+        },
+    }
 })
