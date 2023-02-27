@@ -12,7 +12,7 @@ export default NextAuth({
         }),
     ],
     jwt: {
-      SigninKey: process.env.SIGNIN_Key,
+      signinKey: process.env.SIGNIN_Key,
     },
     callbacks: {
         async SignIn(user, account, profile) {
