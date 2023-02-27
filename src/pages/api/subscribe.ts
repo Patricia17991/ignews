@@ -1,10 +1,18 @@
 import { NextApiRequest, NextApiResponse} from 'next'
 import { stripe } from '../../services/stripe'
-
+import { getSession } from 'next-auth/client'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
    if (req.method === 'POST') {
-     const checkoutSession = await stripe.checkout.sessions.create({
+     const session = await getSession({req})
+
+     const stripeCustomer = await stripe.customers.create({
+        email: session.user.email,
+        //metadata:
+     })
+
+     const stripeCheckoutSession = await stripe.checkout.sessions.create({
+        customer: stripeCustomer.id,
         payment_method_types: ['card'],
         billing_address_collection: 'required',
         line_items: [
