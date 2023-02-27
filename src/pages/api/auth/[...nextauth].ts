@@ -11,9 +11,7 @@ export default NextAuth({
             scope: 'read:user'
         }),
     ],
-    jwt: {
-      signinKey: process.env.SIGNIN_Key,
-    },
+    //usaremos a chave se formos colocar o projeto em produção
     callbacks: {
         async SignIn(user, account, profile) {
          //fazendso uma inserção no banco de dados
