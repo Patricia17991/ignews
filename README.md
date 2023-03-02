@@ -7,6 +7,6 @@
 
 ![ignews](https://github.com/Patricia17991/ignews/blob/main/public/images/image-02.png?raw=true)
 
-![ignews]()
+![ignews](https://github.com/Patricia17991/ignews/blob/main/public/images/image-03.png?raw=true)
 
-![ignews]()
+![ignews](https://github.com/Patricia17991/ignews/blob/main/public/images/image-04.png?raw=true)
