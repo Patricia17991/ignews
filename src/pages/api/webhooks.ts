@@ -13,6 +13,8 @@ async function buffer(readable: Readable) {
    return Buffer.concat(chunks)
 }
 
-export default  (req: NextApiRequest, res: NextApiResponse) => {
+export default  async (req: NextApiRequest, res: NextApiResponse) => {
+   const buf = await buffer(req)
+
    res.status(200).json({ ok: true})
 }
