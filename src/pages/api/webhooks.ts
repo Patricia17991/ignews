@@ -13,8 +13,14 @@ async function buffer(readable: Readable) {
    return Buffer.concat(chunks)
 }
 
+export const config = {
+   api: {
+      bodyParser: false
+   }
+}
+
 export default  async (req: NextApiRequest, res: NextApiResponse) => {
-   const buf = await buffer(req)
+   const buf = await buffer(req)//dentro do buf temos a nossa requisição em si
 
    res.status(200).json({ ok: true})
 }
